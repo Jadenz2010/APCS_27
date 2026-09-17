@@ -13,6 +13,20 @@ class starter {
 		System.out.println("Sqrt: "+ Math.sqrt (3 * 8 + 31 % 7));
 		System.out.println("Pow: " + Math.pow (37 / 3, 35 % 21));
 		System.out.println("Max :" + Math.max( Math.pow( 2,14%3) , Math.sqrt ( 2*6) ));
+
+		Scanner sc= new Scanner(System.in);
+		System.out.println("Please enter a double: ");
+		double x= sc.nextDouble();
+		System.out.println("Please enter another double: ");
+		double y=  sc.nextDouble();
+
+		double maximum= Math.max(x,y);
+		double root= Math.sqrt(y);
+		double power= Math.pow(x,y);
+		System.out.println("Maximum number of and y is: "+ maximum);
+		System.out.println("Square root of y is: "+ root);
+		System.out.println("Power of x and y is: "+ power);
+
 		
 	
 		
