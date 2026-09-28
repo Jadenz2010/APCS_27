@@ -1,6 +1,6 @@
 /*
- *	Author:  
- *  Date: 
+ *	Author:  Jaden Zheng
+ *  Date: 9/23/26
 */
 
 import java.util.Scanner;

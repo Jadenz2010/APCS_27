@@ -9,7 +9,7 @@ class starter {
 	public static void main(String args[]) {
 		// the string "I love to learn coding remotely." will appear in
 		// the command window when you compile and run this program.
-		int v1= 19;
+		int v1= 32;
 		int v2= 32;
 		System.out.println("The first variable is: "+ v1); 
 		System.out.println("The second variable is: "+ v2); 
