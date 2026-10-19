@@ -1,6 +1,6 @@
 /*
- *	Author:  
- *  Date: 
+ *	Author:  Jaden Zheng
+ *  Date: 10/16/26
 */
 
 import java.io.*;
@@ -14,8 +14,58 @@ class starter {
 
 	public static void main(String args[]) throws InterruptedException {
 		// Write your code here!
-
+		Scanner sc=new Scanner(System.in);
+		System.out.println("Welcome to Type Quest!");
+		System.out.println("It is currently "+getTime()+ " and we're ready to play");
+		System.out.println("Given a sentence, type it as fast as possible!");
+		int play=1;
+		while(play==1||play==2){
+		System.out.println("Would you like to: ");
+		System.out.println("1-Play Random\n2-Play set\n3-Quit");
+		play=sc.nextInt();
+		sc.nextLine();
+		if(play==1){
+			populateArrayList();
+			String sent=getSentence();
+			System.out.println(sent);
+			countdown();
+			startTimer();
+			String typed =sc.nextLine();
+			double timepassed=endTimer();
+			int errors=compareSentences(sent,typed);
+			int lets=lettersInSentence(sent);
+			int wrds=wordsInSentence(sent);
+			System.out.println("Nice job! Here is your result!");
+			System.out.println("Time: "+timepassed);
+			System.out.println("Errors: "+errors+"/"+lets);
+			System.out.println((double)(lets)/timepassed+" letters per minute");
+			System.out.println((double)(wrds)/timepassed+" words per minute");
+		}
+		if(play==2){
+			populateArrayList();
+			System.out.println("Please enter what number sentence you'd like to play:");
+			int index=sc.nextInt();
+			sc.nextLine();
+			String sent =getSentence(index);
+			System.out.println(sent);
+			countdown();
+			startTimer();
+			String typed =sc.nextLine();
+			double timepassed=endTimer();
+			int errors=compareSentences(sent, typed);
+			int lets=lettersInSentence(sent);
+			int wrds=wordsInSentence(sent);
+			System.out.println("Nice job! Here is your result!");
+			System.out.println("Time: "+timepassed);
+			System.out.println("Errors: "+errors+"/"+lets);
+			System.out.println((double)(lets)/timepassed+" letters per minute");
+			System.out.println((double)(wrds)/timepassed+" words per minute");
+		}
+		if (play==3){
+			break;
+		}
 		
+	}
 	}
 
 	// This method returns the local current time as a String
