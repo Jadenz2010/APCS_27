@@ -1,6 +1,6 @@
 /*
- *	Author:  
- *  Date: 
+ *	Author:  Jaden Zheng
+ *  Date: 10/31/26
 */
 
 import pkg.*;
@@ -24,7 +24,18 @@ class starter {
 
 	public static void main(String args[]) {
 		// Your code goes below here
-		PooleDwarf test = new PooleDwarf();
+		int num=7;
+		while(num>0){
+		PooleDwarf uno = new PooleDwarf();
+		uno.setName(randName());
+		uno.setAge((int)(Math.random()*100));
+		System.out.println(uno);
+		num--;
+		}
+		
+		
+		
+
 		
 	}
 }
