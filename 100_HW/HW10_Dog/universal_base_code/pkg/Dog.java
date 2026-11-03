@@ -30,9 +30,14 @@ public class Dog {
 		age=a;
 		breed="dog dog";
 	}
+	public Dog(String n, String b, int a){
+		name=n;
+		age=a;
+		breed=b;
+	}
 	public int setAge(int age){
-		age=this.age;
-		
+		this.age=age;	
+		return age;
 	}
 	public int getAge(){
 		return age;
@@ -41,24 +46,26 @@ public class Dog {
 		return name;
 	}
 	public void setName(String name){
-		name=this.name;
+		this.name=name;
 	}
 	public String getBreed(){
 		return breed;
 	}
 	public void setBreed(String breed){
-		breed=this.breed;
+		this.breed=breed;
 		
 	}
-	public boolean isSleeping(int asleep){
-		asleep=(int)(Math.random()*2);
+	public boolean isSleeping(){
+		int asleep=(int)(Math.random()*2);
 		if(asleep==1){
 			return true;
 		}
+		else{
+		return false;
+		}
 	}
 	public void bark(){
-		getName();
-		System.out.println("bark, bark");
+		System.out.println(name+" bark");
 	}
 	
 	}

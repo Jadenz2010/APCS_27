@@ -11,6 +11,7 @@ import java.util.Random;
 public class PooleDwarf {
 	public String name;
 	public int age;
+	
 
 	public PooleDwarf() {		// Default Constructor
 		name = new String("");
@@ -33,16 +34,17 @@ public class PooleDwarf {
 
 	/*	Mutator Methods	*/
 	public void setName(String name){
-		name=this.name;
+		this.name=name;
 	}
 	
 	public void setAge(int age){
-		age=this.age;
+		this.age=age;
 	}
 
 	public boolean isSameName(String name){
-		name=this.name;
-		return false;
+		
+		return this.name.equals(name);
+		
 	}
 	
 	 
