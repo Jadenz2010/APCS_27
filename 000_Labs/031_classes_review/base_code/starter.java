@@ -10,7 +10,6 @@ class starter {
 		// Your code goes below here
 
 
-
 		
 	}
 }
